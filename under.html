@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .showcase {
+            position: absolute;
+            right: 0;
+            width: 100%;
+            min-height: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #111;
+            transition: 0.5s;
+            z-index: 2;
+        }
+
+        .showcase.active {
+            right: 300px;
+        }
+
+        .showcase video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #b5d9ea;
+            mix-blend-mode: overlay;
+        }
+
+        .text {
+            position: relative;
+            z-index: 10;
+        }
+
+        .text h2 {
+            font-size: 5em;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1em;
+            text-transform: uppercase;
+        }
+
+        .text h3 {
+            font-size: 4em;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1em;
+            text-transform: uppercase;
+        }
+
+        .text p {
+            font-size: 1.1em;
+            color: #fff;
+            margin: 20px 0;
+            font-weight: 400;
+            max-width: 700px;
+        }
+
+        .text a {
+            display: inline-block;
+            font-size: 1em;
+            background: #fff;
+            padding: 10px 30px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+            color: #111;
+            letter-spacing: 2px;
+            transition: 0.2s;
+        }
+
+        .text a:hover {
+            letter-spacing: 6px;
+            color: white;
+            background: rgb(54, 54, 238);
+        }
+
+
+        @media (max-width: 991px) {
+
+            .showcase,
+            .showcase header {
+                padding: 40px;
+            }
+
+            .text h2 {
+                font-size: 2em;
+            }
+
+            .text h3 {
+                font-size: 1em;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            video{
+                width: 100%;
+                overflow-y: hidden;
+            }
+        }
+        
+    </style>
+    <!-- Video Source -->
+    <!-- https://www.pexels.com/video/aerial-view-of-beautiful-resort-2169880/ -->
+    <section class="showcase">
+        <video src="/pexels-mikhail-nilov-7710027 (1080p).mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="text">
+            <h2>Website<br>Under<br>Development</h2>
+            <br>
+            <br>
+            <h3>See you Soon!</h3>
+            <br>
+            <a href="index.html">Back to Website</a>
+        </div>
+        <ul class="social">
+            <img src="">
+        </ul>
+    </section>
+</body>
+
+</html>
